@@ -56,24 +56,24 @@ body {
     gap: 10px;
 }
 
-.btn {
-    padding: 15px 25px;
+.add-task {
+    flex: 1;
+    padding: 10px;
+    margin-bottom: 20px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#addbtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--task-color);
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    color: var(--primary-color);
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-    box-sizing: border-box;
-    font-weight: bold;
 }
-
-.btn:focus {
-    outline: 2px solid var(--title-color);
-    outline-offset: 2px;
-}
-
 
 #footer {
     margin-top: auto;
