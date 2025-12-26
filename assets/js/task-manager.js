@@ -6,14 +6,42 @@ const taskList = document.getElementById('task-list');
 //load tasks from localStorage
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-//functions
+//display tasks placed in localStorage
 function showTasks() {
-}
+    taskList.innerHTML = '';
 
-function addTask() {
-}
+    tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        li.classname =`task ${task.completed ? 'completed' : ''}`;
 
-function saveTasks() {
-}
+        li.innerHTML = `
+            <span class="text">${task.text}</span>
+            <button class="delete" data-index="${index}">Delete</button>`;
+    
+        li.addEventListener("click", () => {
+            tasks[index].completed = !tasks[index].completed;
+            saveTasks();
+            showTasks();
+    });
 
-showTasks();
+    li.querySelector('.delete').addEventListener('click', (e) => {
+        e.stopPropagation();
+        tasks.splice(index, 1);
+        saveTasks();
+        showTasks();
+    });
+
+    taskList.appendChild(li);
+    });
+
+}
+//functions
+
+
+// function addTask() {
+// }
+
+// function saveTasks() {
+// }
+
+// showTasks();
