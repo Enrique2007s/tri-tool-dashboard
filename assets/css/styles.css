@@ -4,17 +4,28 @@
     --text-color: #000000;
     --title-color: #368517;
     --footer-text-color: #ffffff;
+
+    /* Button color variables */
+    --task-color: #4CAF50;
+    --converter-color: #2196F3;
+    --notes-color: #FF9800;
+    --timer-color: #F44336;
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: var(--primary-color);
     color: var(--text-color);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 #main-title {
     text-align: center;
     color: var(--title-color);
+    margin-top: 15px 0;
 }
 
 #subheading {
@@ -26,10 +37,10 @@ body {
 
 .page-description-container {
     max-width: 800px;
-    margin: 0 auto 20px auto;
-    padding: 10px;
+    margin: 0 auto 30px;
+    padding: 20px;
     background-color: var(--secondary-color);
-    border-radius: 5px;
+    border-radius: 8px;
     text-align: center;
 }
 .page-description {
@@ -45,16 +56,84 @@ body {
     margin-bottom: 40px;
 }
 
-#footer {
-    position: fixed;
-    bottom: 0;
+#card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
     width: 100%;
-    
+    box-sizing: border-box;
+    font-weight: bold;
+
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+/* Button color classes */
+.task-manager-color {
+    background-color: var(--task-color);
+}
+
+.unit-converter-color {
+    background-color: var(--converter-color);
+}
+
+.notes-color {
+    background-color: var(--notes-color);
+}
+
+.timer-color {
+    background-color: var(--timer-color);
+}
+
+#footer {
+    margin-top: auto;
+    background-color: var(--secondary-color);
+    padding: var(--spacing-md) 0;
+    width: 100%;
 }
 .footer-text {
     text-align: center;
     color: var(--footer-text-color);
-    padding: 20px 0;
-    background-color: var(--secondary-color);
-    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #card-container {
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn {
+        min-height: 100px;
+        font-size: 16px;
+    }
 }
