@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content=" Tri-Tool Dashboard for monitoring and managing your tools efficiently.">
+    <meta name="description" content="Tri-Tool Dashboard for monitoring and managing your tools efficiently.">
     <meta name="keywords" content="Tool, Tools, Dashboard, Management, Monitoring, Unit Conversion, Task Management, Notes, Timer, all-in-one, productivity">
     <meta name="author" content="Enrique Raul Smith Martinez">
     <title>Tri-Tool Dashboard</title>
@@ -15,20 +15,25 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <h1 class ="main-title"> Tri-Tool Dashboard</h1>
-        <div class ="page-description-container">
-            <p class="page-description"> Tri-Tool Dashboard, used for monitoring and managing your tools efficiently. Tri-Tool Dashboard combines a Task Manager, Unit Converter, Notes, and Timer into one seamless interface to boost your productivity. It offers an all-in-one solution for managing tasks, converting units, taking notes, and tracking time, making it easier to stay organized and efficient throughout your day.</p>
-            
+    <h1 id ="main-title">Tri-Tool Dashboard</h1>
+        <div class="page-description-container">
+            <p class="page-description">Tri-Tool Dashboard, used for monitoring and managing your tools efficiently.</p>
+            <h2 id="subheading">Streamline your Workflow!</h2>
+            <p class="page-description">Tri-Tool Dashboard combines a Task Manager, Unit Converter, Notes, and Timer into one seamless interface to boost your productivity. It offers an all-in-one solution for managing tasks, converting units, taking notes, and tracking time, making it easier to stay organized and efficient throughout your day.</p>
+            <p class="page-description">Choose one of the tools below to get started! </p>
         </div>
-        <div class="button-container">
-            <button id="task-manager"> Task Manager</button>
-            <button id="unit-converter"> Unit Converter</button>
-            <button id="notes"> Notes</button>
-            <button id="timer"> Timer</button>
+        <div id="button-container">
+            <div id="card-container">
+                <button id="task-manager" class="btn task-manager-color"> Task Manager</button>
+                <button id="unit-converter" class="btn unit-converter-color"> Unit Converter</button>
+                <button id="notes" class="btn notes-color"> Notes</button>
+                <button id="timer" class="btn timer-color"> Timer</button>
+        
+            </div>
         </div>
 
 
-<footer>
+<footer id="footer">
     <p class="footer-text">Tri-Tool Dashboard &copy; <span id="current-year">2025</span> | A JavaScript Project</p>
 </footer>
     <!-- JavaScript link -->
