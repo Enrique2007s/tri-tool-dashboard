@@ -13,10 +13,16 @@ const volumeFrom = document.getElementById('volumeFrom');
 const volumeTo = document.getElementById('volumeTo');
 const volumeResult = document.getElementById('volumeResult');
 
-// Initialize converters on page load
+const tempIntput = document.getElementById('tempInput');
+const tempFrom = document.getElementById('tempFrom');
+const tempTo = document.getElementById('tempTo');
+const tempResult = document.getElementById('tempResult');
+
+// Initialize converters when the page loads
 window.onload = function() {
     convertDistance();
     convertVolume();
+    convertTemperature();
 }
 
 // Add event listeners for real-time conversion
@@ -27,6 +33,10 @@ distanceTo.addEventListener('change', convertDistance);
 volumeInput.addEventListener('input', convertVolume);
 volumeFrom.addEventListener('change', convertVolume);
 volumeTo.addEventListener('change', convertVolume);
+
+tempIntput.addEventListener('input', convertTemperature);
+tempFrom.addEventListener('change', convertTemperature);
+tempTo.addEventListener('change', convertTemperature);
 
 // Function to convert distance
 function convertDistance() {
@@ -48,7 +58,7 @@ function convertDistance() {
     } else if (to === 'mi') {
         result = value * KM_TO_MILES;
     }
-    //updates answer
+    //updates answer for distance
     distanceResult.textContent = 
         `${distanceInput.value} ${from} = ${result.toFixed(2)} ${to}`;
 }
@@ -74,12 +84,53 @@ function convertVolume() {
     } else if (to === 'gallons') {
         result = value * LITERS_TO_GALLONS;
     }
-    //updates answer
+    //updates answer for volume
     volumeResult.textContent = 
         `${volumeInput.value} ${from} = ${result.toFixed(2)} ${to}`;
 }
 
 
+//function to convert temperature
+function convertTemperature() {
+    let value = parseFloat(tempIntput.value);
+    if (isNaN(value)) value = 0;
+
+    let from = tempFrom.value;
+    let to = tempTo.value;
+    let result;
+
+    //convert from celsius first
+    if (from === 'celsius') {
+    } else if (from === 'fahrenheit') {
+        value = (value - 32) * 5 / 9;
+    } else if (from === 'kelvin') {
+        value = value - 273.15;
+    }
+    //convert from celsius to fahrenheit
+    if (to === 'celsius') {
+        result = value;
+    } else if (to === 'fahrenheit') {
+        result = (value * 9 / 5) + 32;
+    } else if (to === 'kelvin') {
+        result = value + 273.15;
+    }
+
+    //adding the symbol for temperature units
+
+    if (from === 'celsius') from = '°C';
+    else if (from === 'fahrenheit') from = '°F';
+    else if (from === 'kelvin') from = 'K';
+
+    //adding the symbol for temperature units
+
+    if (to === 'celsius') to = '°C';
+    else if (to === 'fahrenheit') to = '°F';
+    else if (to === 'kelvin') to = 'K';
+
+    //updates answer for temperature
+    tempResult.textContent = 
+        `${tempIntput.value} ${from} = ${result.toFixed(2)} ${to}`;
+}
 
 //swap distance units
 function swapDistance() {
@@ -102,3 +153,10 @@ function swapVolume() {
 
     convertVolume();
 }
+
+/*
+I don't swap temperature units since
+there are three units. User will have
+to select manually... Or go to my repository,
+fork it, and add the feature him/herself :)
+*/

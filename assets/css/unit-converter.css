@@ -87,7 +87,7 @@ h3 {
     gap: 15px;
 }
 
-#distanceResult {
+#distanceResult, #volumeResult, #tempResult {
     margin-top: 10px;
     font-weight: bold;
     color: var(--converter-color);
