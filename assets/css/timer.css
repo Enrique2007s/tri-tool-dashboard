@@ -54,36 +54,6 @@ h2 {
     line-height: 1.5;
 }
 
-.task-input-container {
-    max-width: 600px;
-    margin: 0 auto 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.add-task {
-    flex: 1;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#addbtn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: var(--timer-color);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#addbtn:hover {
-    background-color: var(--timer-color);
-}
-
 #back-btn {
     color: var(--primary-color);
     background-color: var(--timer-color);
@@ -97,35 +67,34 @@ h2 {
     background-color: var(--timer-color);
 }
 
-#tasklist {
-    max-width: 600px;
-    padding: 10px;
-    margin-top: 20px;
-    list-style-type: none;
-    list-style: none;
-        }
-
-.task-container {
-    max-width: 600px;
-    margin: 0 auto 40px; ;
-    list-style-type: none;
-}
-
-.task {
-    background-color: var(--secondary-color);
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    margin: 10px;
     color: var(--primary-color);
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: var(--timer-color);
+    min-width: 120px;
 }
 
-.text {
-    flex: 1;
-    margin-right: 10px;
+.timer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 80px;
 }
+
+.time-inputs {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.timer-controls {
+    text-align: center;
+    margin-top: 20px;
+}
+
 #footer {
     margin-top: auto;
     background-color: var(--secondary-color);
