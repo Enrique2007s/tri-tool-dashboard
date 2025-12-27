@@ -7,8 +7,6 @@
 
     /* Button color variables */
     --task-color: #4CAF50;
-    --converter-color: #2196F3;
-    --timer-color: #F44336;
 }
 
 body {
@@ -60,15 +58,6 @@ h2 {
     gap: 10px;
 }
 
-.add-task {
-    flex: 1;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
 #addbtn {
     padding: 10px 20px;
     font-size: 16px;
@@ -77,10 +66,6 @@ h2 {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-}
-
-#addbtn:hover {
-    background-color: var(--task-color);
 }
 
 #back-btn {
@@ -92,21 +77,16 @@ h2 {
     font-size: 16px;
 }
 
-#back-btn:hover {
-    background-color: var(--task-color);
-}
-
 #tasklist {
     max-width: 600px;
     padding: 10px;
     margin-top: 20px;
-    list-style-type: none;
     list-style: none;
-        }
+}
 
 .task-container {
     max-width: 600px;
-    margin: 0 auto 40px; ;
+    margin: 0 auto 40px;
     list-style-type: none;
 }
 
@@ -122,9 +102,9 @@ h2 {
 }
 
 .text {
-    flex: 1;
-    margin-right: 10px;
+    padding-right: 20px;
 }
+
 #footer {
     margin-top: auto;
     background-color: var(--secondary-color);
@@ -133,12 +113,4 @@ h2 {
 .footer-text {
     text-align: center;
     color: var(--footer-text-color);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .btn {
-        min-height: 100px;
-        font-size: 16px;
-    }
 }
