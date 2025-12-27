@@ -28,7 +28,7 @@ function convertDistance() {
     let result;
 
     if (from === 'km') {
-    } else if (from === 'miles') {
+    } else if (from === 'mi') {
         value = value / KM_TO_MILES;
     }
 

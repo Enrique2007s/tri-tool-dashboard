@@ -87,6 +87,13 @@ h3 {
     gap: 15px;
 }
 
+#distanceResult {
+    margin-top: 10px;
+    font-weight: bold;
+    color: var(--converter-color);
+    text-align: center;
+}
+
 #footer {
     margin-top: auto;
     background-color: var(--secondary-color);
