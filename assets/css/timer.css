@@ -27,14 +27,7 @@ h2 {
 #main-title {
     text-align: center;
     color: var(--timer-color);
-    margin-top: 15px 0;
-}
-
-#subheading {
-    text-align: center;
-    color: white;
-    margin-top: -10px;
-    margin-bottom: 20px;
+    margin: 15px 0;
 }
 
 .page-description-container {
@@ -60,12 +53,7 @@ h2 {
     font-size: 16px;
 }
 
-#back-btn:hover {
-    background-color: var(--timer-color);
-}
-
 button {
-    cursor: pointer;
     border: none;
     padding: 15px 30px;
     font-size: 18px;
@@ -75,14 +63,7 @@ button {
 }
 
 .timer-button {
-    cursor: pointer;
-    border: none;
-    padding: 15px 30px;
-    font-size: 18px;
     margin: 10px;
-    color: var(--primary-color);
-    background-color: var(--timer-color);
-    min-width: 120px;
 }
 
 .timer {
@@ -111,10 +92,3 @@ button {
     color: var(--footer-text-color);
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .btn {
-        min-height: 100px;
-        font-size: 16px;
-    }
-}
