@@ -4,7 +4,8 @@ const startBtn = document.getElementById('startBtn');
 const pauseBtn = document.getElementById('pauseBtn');
 const resetBtn = document.getElementById('resetBtn');
 const setTimeBtn = document.getElementById('setTimeBtn');
-const minutesInput = document.getElementById('minutes');
+const minutesInput = document.getElementById('minutes-input');
+const secondsInput = document.getElementById('seconds-input');
 
 //timer variables
 let timeLeft = 25 * 60;
@@ -19,26 +20,29 @@ function updateTimer() {
 }   
 
 function setTime() {
-    const minutes = parseInt(minutesInput.value);
-
-    if (isNaN(minutes) || minutes < 1) {
-        minutesInput.value = 1;
+    const minutes = parseInt(minutesInput.value) || 0;
+    const seconds = parseInt(secondsInput.value) || 0;
+    
+    // Validate inputs
+    if (minutes < 0) minutesInput.value = 0;
+    if (seconds < 0) secondsInput.value = 0;
+    if (seconds > 59) secondsInput.value = 59;
+    
+    // Check if total time is zero
+    const totalSeconds = (minutes * 60) + seconds;
+    if (totalSeconds === 0) {
+        alert("Please set a time greater than 0");
         return;
     }
-
-    if (minutes > 60) {
-        minutesInput.value = 60;
-        return;
-    }
-
+    
     if (isRunning) {
         if (!confirm("Timer is running. Do you want to reset the timer?")) {
-        return;
+            return;
+        }
+        pauseTimer();
     }
-    pauseTimer();
-    }
-
-    totalTime = minutes * 60;
+    
+    totalTime = totalSeconds;
     timeLeft = totalTime;
     updateTimer();
 }
@@ -81,6 +85,12 @@ resetBtn.addEventListener('click', resetTimer);
 
 // code to press enter to set time
 minutesInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        setTime();
+    }
+});
+
+secondsInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         setTime();
     }
