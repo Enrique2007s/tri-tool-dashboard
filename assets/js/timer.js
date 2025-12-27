@@ -44,9 +44,26 @@ function setTime() {
 }
 
 function startTimer() {
+    if (isRunning) return;
+
+    isRunning = true;
+    timer = setInterval(() => {
+        if (timeLeft > 0) {
+            timeLeft--;
+            updateTimer();
+        } else {
+            clearInterval(timer);
+            isRunning = false;
+            alert("Time is up!")
+        }
+    }, 1000);
 }
 
 function pauseTimer() {
+    if (!isRunning) return;
+
+    isRunning = false;
+    clearInterval(timer);
 }
 
 function resetTimer() {
