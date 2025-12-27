@@ -6,10 +6,41 @@ const resetBtn = document.getElementById('resetBtn');
 const setTimeBtn = document.getElementById('setTimeBtn');
 const minutesInput = document.getElementById('minutes');
 
-function updateTimer(seconds) {
-}
+//timer variables
+let timeLeft = 25 * 60;
+let totalTime = timeLeft;
+let timer = null;
+let isRunning = false;
+
+function updateTimer() {
+    const minutes = Math.floor(timeLeft / 60);
+    const seconds = timeLeft % 60;
+    timerElement.textContent = `${minutes} : ${seconds.toString().padStart(2, '0')}`;
+}   
 
 function setTime() {
+    const minutes = parseInt(minutesInput.value);
+
+    if (isNaN(minutes) || minutes < 1) {
+        minutesInput.value = 1;
+        return;
+    }
+
+    if (minutes > 60) {
+        minutesInput.value = 60;
+        return;
+    }
+
+    if (isRunning) {
+        if (!confirm("Timer is running. Do you want to reset the timer?")) {
+        return;
+    }
+    pauseTimer();
+    }
+
+    totalTime = minutes * 60;
+    timeLeft = totalTime;
+    updateTimer();
 }
 
 function startTimer() {
