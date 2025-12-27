@@ -80,8 +80,11 @@ pauseBtn.addEventListener('click', pauseTimer);
 resetBtn.addEventListener('click', resetTimer);
 
 // code to press enter to set time
-minutesInput.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
+minutesInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
         setTime();
     }
 });
+
+//start timer display
+updateTimer();
