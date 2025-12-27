@@ -88,7 +88,11 @@ h2 {
     color: var(--primary-color);
     background-color: var(--task-color);
     width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 16px;
 }
+
 #back-btn:hover {
     background-color: var(--task-color);
 }
@@ -125,7 +129,6 @@ h2 {
 #footer {
     margin-top: auto;
     background-color: var(--secondary-color);
-    padding: var(--spacing-md) 0;
     width: 100%;
 }
 .footer-text {

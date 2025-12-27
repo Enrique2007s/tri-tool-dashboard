@@ -120,7 +120,6 @@ body {
 #footer {
     margin-top: auto;
     background-color: var(--secondary-color);
-    padding: var(--spacing-md) 0;
     width: 100%;
 }
 .footer-text {
