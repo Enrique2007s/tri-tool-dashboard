@@ -8,7 +8,7 @@ const minutesInput = document.getElementById('minutes-input');
 const secondsInput = document.getElementById('seconds-input');
 
 //timer variables
-let timeLeft = 25 * 60;
+let timeLeft = 0 * 60;
 let totalTime = timeLeft;
 let timer = null;
 let isRunning = false;
@@ -73,7 +73,7 @@ function pauseTimer() {
 function resetTimer() {
     clearInterval(timer);
     isRunning = false;
-    timeLeft = totalTime;
+    timeLeft = totalTime = 0;
     updateTimer();
 }
 
