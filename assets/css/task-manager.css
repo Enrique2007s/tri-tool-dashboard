@@ -22,6 +22,11 @@ body {
     flex-direction: column;
 }
 
+h2 {
+    color: var(--title-color);
+    text-align: center;
+}
+
 #main-title {
     text-align: center;
     color: var(--title-color);
@@ -75,6 +80,35 @@ body {
     cursor: pointer;
 }
 
+#tasklist {
+    max-width: 600px;
+    padding: 10px;
+    margin-top: 20px;
+    list-style-type: none;
+    list-style: none;
+        }
+
+.task-container {
+    max-width: 600px;
+    margin: 0 auto 40px; ;
+    list-style-type: none;
+}
+
+.task {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    flex: 1;
+    margin-right: 10px;
+}
 #footer {
     margin-top: auto;
     background-color: var(--secondary-color);

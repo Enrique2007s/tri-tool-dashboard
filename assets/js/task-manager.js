@@ -1,18 +1,18 @@
 //Get elements
 const taskInput = document.getElementById('task-input');
-const addBtn = document.getElementById('addBtn');
-const taskList = document.getElementById('taskList');
+const addbtn = document.getElementById('addbtn');
+const tasklist = document.getElementById('tasklist');
 
 //load tasks from localStorage
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 //display tasks placed in localStorage
 function showTasks() {
-    taskList.innerHTML = '';
+    tasklist.innerHTML = '';
 
     tasks.forEach((task, index) => {
         const li = document.createElement('li');
-        li.classname =`task ${task.completed ? 'completed' : ''}`;
+        li.className =`task ${task.completed ? 'completed' : ''}`;
 
         li.innerHTML = `
             <span class="text">${task.text}</span>
@@ -31,7 +31,7 @@ function showTasks() {
         showTasks();
     });
 
-    taskList.appendChild(li);
+    tasklist.appendChild(li);
     });
 
 }
@@ -51,7 +51,7 @@ function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-addBtn.addEventListener('click', addTask);
+addbtn.addEventListener('click', addTask);
 
 taskInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
