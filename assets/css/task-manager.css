@@ -80,6 +80,19 @@ h2 {
     cursor: pointer;
 }
 
+#addbtn:hover {
+    background-color: #45a049;
+}
+
+#back-btn {
+    color: var(--primary-color);
+    background-color: var(--task-color);
+    width: 100%;
+}
+#back-btn:hover {
+    background-color: #45a049;
+}
+
 #tasklist {
     max-width: 600px;
     padding: 10px;
