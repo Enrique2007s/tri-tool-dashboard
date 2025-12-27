@@ -23,13 +23,13 @@ body {
 }
 
 h2 {
-    color: var(--task-color);
+    color: var(--converter-color);
     text-align: center;
 }
 
 #main-title {
     text-align: center;
-    color: var(--task-color);
+    color: var(--converter-color);
     margin-top: 15px 0;
 }
 
@@ -54,74 +54,15 @@ h2 {
     line-height: 1.5;
 }
 
-.task-input-container {
-    max-width: 600px;
-    margin: 0 auto 20px;
-    display: flex;
-    gap: 10px;
-}
-
-.add-task {
-    flex: 1;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#addbtn {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: var(--task-color);
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#addbtn:hover {
-    background-color: var(--task-color);
-}
-
 #back-btn {
     color: var(--primary-color);
-    background-color: var(--task-color);
+    background-color: var(--converter-color);
     width: 100%;
 }
 #back-btn:hover {
-    background-color: var(--task-color);
+    background-color: var(--converter-color);
 }
 
-#tasklist {
-    max-width: 600px;
-    padding: 10px;
-    margin-top: 20px;
-    list-style-type: none;
-    list-style: none;
-        }
-
-.task-container {
-    max-width: 600px;
-    margin: 0 auto 40px; ;
-    list-style-type: none;
-}
-
-.task {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.text {
-    flex: 1;
-    margin-right: 10px;
-}
 #footer {
     margin-top: auto;
     background-color: var(--secondary-color);
