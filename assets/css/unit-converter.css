@@ -79,7 +79,7 @@ h3 {
 }
 
 .converter-box {
-    max-width: 360px;
+    max-width: 370px;
     width: 90%;
     padding: 20px;
     border: 2px solid var(--converter-color);
