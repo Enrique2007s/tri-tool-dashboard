@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tri-Tool Dashboard for monitoring and managing your tools efficiently.">
-    <meta name="keywords" content="Tool, Tools, Dashboard, Management, Monitoring, Unit Conversion, Task Management, Notes, Timer, all-in-one, productivity">
+    <meta name="keywords" content="Tool, Tools, Dashboard, Management, Monitoring, Unit Conversion, Task Management, Timer, all-in-one, productivity">
     <meta name="author" content="Enrique Raul Smith Martinez">
     <title>Tri-Tool Timer</title>
     <!-- Favicon -->
@@ -27,18 +27,18 @@
     <div class="time-inputs">
         <input type="number" id="minutes-input" placeholder="Minutes" min="0"/>
         <input type="number" id="seconds-input" placeholder="Seconds" min="0" max="59"/>
-        <button id="setTimeBtn">Set Time</button>
+        <button id="setTimeBtn" aria-label="Set time for timer">Set Time</button>
     </div>
     <div class="timer-controls">
-        <button id="startBtn" class="timer-button">Start</button>
-        <button id="pauseBtn" class="timer-button">Pause</button>
-        <button id="resetBtn" class="timer-button">Reset</button>
+        <button id="startBtn" class="timer-button" aria-label="Start the timer">Start</button>
+        <button id="pauseBtn" class="timer-button" aria-label="Pause the timer">Pause</button>
+        <button id="resetBtn" class="timer-button" aria-label="Reset the timer">Reset</button>
     </div>
 
 
-<footer id="footer">
-    <p class="footer-text">Tri-Tool Timer &copy; <span id="current-year">2025</span> | A JavaScript Project</p>
-</footer>
+    <footer id="footer">
+        <p class="footer-text">Tri-Tool Timer &copy; <span id="current-year">2025</span> | A JavaScript Project</p>
+    </footer>
     <!-- JavaScript link -->
     <script src="assets/js/timer.js"></script>
 </body>

@@ -8,7 +8,6 @@
     /* Button color variables */
     --task-color: #4CAF50;
     --converter-color: #2196F3;
-    --notes-color: #FF9800;
     --timer-color: #F44336;
 }
 
@@ -44,7 +43,7 @@ body {
     text-align: center;
 }
 .page-description {
-    color: var(--primary-color); /*change later*/
+    color: var(--primary-color); 
     font-size: 16px;
     line-height: 1.5;
 }
@@ -91,10 +90,6 @@ body {
     opacity: 0.8;
     outline: 2px solid var(--converter-color);
 }
-.notes-color:hover, .notes-color:focus {
-    opacity: 0.8;
-    outline: 2px solid var(--notes-color);
-}
 .timer-color:hover, .timer-color:focus {
     opacity: 0.8;
     outline: 2px solid var(--timer-color);
@@ -107,10 +102,6 @@ body {
 
 .unit-converter-color {
     background-color: var(--converter-color);
-}
-
-.notes-color {
-    background-color: var(--notes-color);
 }
 
 .timer-color {
