@@ -6,3 +6,18 @@ const resetBtn = document.getElementById('resetBtn');
 const setTimeBtn = document.getElementById('setTimeBtn');
 const minutesInput = document.getElementById('minutes');
 
+function updateTimer(seconds) {
+}
+
+function setTime() {
+}
+
+function startTimer() {
+}
+
+function pauseTimer() {
+}
+
+function resetTimer() {
+}
+
