@@ -121,13 +121,13 @@ h3 {
     h2 {
         margin: 20px 0 15px;
     }
+    .btn {
+        min-height: 100px;
+    }
 
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 0 10px;
-    }
 
     #divider {
         grid-template-columns: 1fr;
@@ -148,9 +148,6 @@ h3 {
 }
 
 @media (max-width: 360px) {
-    body {
-        padding: 0 5px;
-    }
 
     .converter-box {
         padding: 10px;
