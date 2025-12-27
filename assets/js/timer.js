@@ -67,5 +67,21 @@ function pauseTimer() {
 }
 
 function resetTimer() {
+    clearInterval(timer);
+    isRunning = false;
+    timeLeft = totalTime;
+    updateTimer();
 }
 
+//event listeners
+setTimeBtn.addEventListener('click', setTime);
+startBtn.addEventListener('click', startTimer);
+pauseBtn.addEventListener('click', pauseTimer);
+resetBtn.addEventListener('click', resetTimer);
+
+// code to press enter to set time
+minutesInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        setTime();
+    }
+});

@@ -70,7 +70,16 @@ h2 {
 button {
     cursor: pointer;
     border: none;
-    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: var(--primary-color);
+    background-color: var(--timer-color);
+    min-width: 120px;
+}
+
+.timer-button {
+    cursor: pointer;
+    border: none;
     padding: 15px 30px;
     font-size: 18px;
     margin: 10px;
