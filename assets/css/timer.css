@@ -27,7 +27,6 @@ h2 {
 #main-title {
     text-align: center;
     color: var(--timer-color);
-    margin: 15px 0;
 }
 
 .page-description-container {
