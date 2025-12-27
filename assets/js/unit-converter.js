@@ -2,6 +2,7 @@
 const KM_TO_MILES = 0.621371;
 const LITERS_TO_GALLONS = 0.264172;
 
+//DOM elements
 const distanceInput = document.getElementById('distanceInput');
 const distanceFrom = document.getElementById('distanceFrom');
 const distanceTo = document.getElementById('distanceTo');
@@ -36,17 +37,18 @@ function convertDistance() {
     let to = distanceTo.value;
     let result;
 
+    //convert from km first
     if (from === 'km') {
     } else if (from === 'mi') {
         value = value / KM_TO_MILES;
     }
-
+    //convert from km to mi
     if (to === 'km') {
         result = value;
     } else if (to === 'mi') {
         result = value * KM_TO_MILES;
     }
-
+    //updates answer
     distanceResult.textContent = 
         `${distanceInput.value} ${from} = ${result.toFixed(2)} ${to}`;
 }
@@ -61,17 +63,18 @@ function convertVolume() {
     let to = volumeTo.value;
     let result;
 
+    //convert from litres first
     if (from === 'litres') {
     } else if (from === 'gallons') {
         value = value / LITERS_TO_GALLONS;
     }
-
+    //convert from litres to gallons
     if (to === 'litres') {
         result = value;
     } else if (to === 'gallons') {
         result = value * LITERS_TO_GALLONS;
     }
-
+    //updates answer
     volumeResult.textContent = 
         `${volumeInput.value} ${from} = ${result.toFixed(2)} ${to}`;
 }
