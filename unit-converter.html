@@ -22,7 +22,7 @@
         </div>
 
         <h2>Convert Your Units</h2>
-
+        <div id="divider">
         <div class="converter-box">
             <h3>Distance Converter</h3>
                 <div class="converter">
@@ -31,7 +31,7 @@
                         <option value="km">Kilometers</option>
                         <option value="mi">Miles</option>
                     </select>
-                    <span> = </span>
+                    <span> - </span>
                     <select id="distanceTo">
                         <option value="mi">Miles</option>
                         <option value="km">Kilometers</option>
@@ -50,7 +50,7 @@
                         <option value="litres">Litres</option>
                         <option value="gallons">Gallons</option>
                     </select>
-                    <span> = </span>
+                    <span> - </span>
                     <select id="volumeTo">
                         <option value="gallons">Gallons</option>
                         <option value="litres">Litres</option>
@@ -71,7 +71,7 @@
                         <option value="fahrenheit">Fahrenheit</option>
                         <option value="kelvin">Kelvin</option>
                     </select>
-                    <span> = </span>
+                    <span> - </span>
                     <select id="tempTo">
                         <option value="fahrenheit">Fahrenheit</option>
                         <option value="celsius">Celsius</option>
@@ -81,29 +81,10 @@
                 <button class="swap-btn" onclick="swapTemperature()">Swap Units</button>
                 <div class="result" id="tempResult">1°C = 33.8°F</div>
         </div>
-
-        <div class="converter-box">
-            <h3>Distance Converter</h3>
-                <div class="converter">
-                    <input type="number" id="distanceInput" value="1">
-                    <select id="distanceFrom">
-                        <option value="km">Kilometers</option>
-                        <option value="mi">Miles</option>
-                    </select>
-                    <span> = </span>
-                    <select id="distanceTo">
-                        <option value="mi">Kilometers</option>
-                        <option value="km">Miles</option>
-                    </select>
-                </div>
         </div>
 
 
 
-
-        <button class="swap-btn" onclick="swapDistance()">Swap Units</button>
-        <div class="result" id="distanceResult">1km = 0.62 mi</div>
-    </div>
 <footer id="footer">
     <p class="footer-text">Tri-Tool Dashboard &copy; <span id="current-year">2025</span> | A JavaScript Project</p>
 </footer>

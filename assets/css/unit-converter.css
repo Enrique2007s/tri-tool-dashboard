@@ -27,6 +27,11 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    color: var(--converter-color);
+    text-align: center;
+}
+
 #main-title {
     text-align: center;
     color: var(--converter-color);
@@ -61,6 +66,25 @@ h2 {
 }
 #back-btn:hover {
     background-color: var(--converter-color);
+}
+
+#divider {
+      display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center; 
+  justify-content: center;
+  gap: 20px;
+}
+
+.converter-box {
+    max-width: 400px;
+    padding: 20px;
+    border: 2px solid var(--converter-color);
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 #footer {
