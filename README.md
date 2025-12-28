@@ -54,8 +54,23 @@ https://validator.w3.org/nu/#textarea
 No errors were retuned through the Official Jigsaw Validator
 https://jigsaw.w3.org/css-validator/#validate_by_input
 
-*JS
+* JS
 Small, but non essential warnings in the JSLINT Validator
 https://www.jslint.com/
 
 Warnings found:
+task-manager.js
+<img width="1166" height="426" alt="image" src="https://github.com/user-attachments/assets/72949e09-deb0-45b3-a01c-35e695502a5e" />
+<img width="1248" height="128" alt="image" src="https://github.com/user-attachments/assets/7da8c968-9b15-4128-8d92-52e4c278de7b" />
+
+timer.js
+<img width="1179" height="411" alt="image" src="https://github.com/user-attachments/assets/2467bf24-3770-4dbf-bdea-03f8616b6718" />
+
+unit-converter.js
+<img width="1181" height="361" alt="image" src="https://github.com/user-attachments/assets/538ee509-6bb7-448b-afc1-6c08f92c5bcd" />
+
+
+### Display Testing (Visuals on different screen sizes)
+
+Everything related with testing screen sizes is in this document:
+https://docs.google.com/document/d/1dwUF_ai0WJE3m36SNGdY2rDy6Yr7SBkwnClOguKJ4oA/edit?usp=sharing
