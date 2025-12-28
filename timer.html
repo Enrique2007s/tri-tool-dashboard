@@ -18,27 +18,31 @@
     <link rel="stylesheet" href="assets/css/timer.css">
 </head>
 <body>
+    <!--back button at the top-->
     <button id="back-btn" class="btn" aria-label="go back to dashboard" onclick="window.location.href='index.html'"> Back to Dashboard</button>
     <h1 id ="main-title">Timer</h1>
     <div class="page-description-container">
         <p class="page-description"> The Timer tool helps you keep track of specific time intervals, set countdowns, and manage your time efficiently to enhance productivity.</p>
     </div>
 
+    <!--area to see the timer-->
     <h2>Set Your Timer</h2>
     <div class="timer" id="timer">00:00</div>
 
+    <!--inputs for minutes and seconds-->
     <div class="time-inputs">
         <input type="number" id="minutes-input" placeholder="Minutes" min="0" aria-label="Input for minutes">
         <input type="number" id="seconds-input" placeholder="Seconds" min="0" max="59" aria-label="Input for seconds">
         <button id="setTimeBtn" aria-label="Set time for timer">Set Time</button>
     </div>
+    <!--buttons to control the timer-->
     <div class="timer-controls">
         <button id="startBtn" class="timer-button" aria-label="Start the timer">Start</button>
         <button id="pauseBtn" class="timer-button" aria-label="Pause the timer">Pause</button>
         <button id="resetBtn" class="timer-button" aria-label="Reset the timer">Reset</button>
     </div>
 
-
+    <!--footer-->
     <footer id="footer">
         <p class="footer-text">Tri-Tool Timer &copy; <span id="current-year">2025</span> | A JavaScript Project</p>
     </footer>

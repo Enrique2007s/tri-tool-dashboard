@@ -13,12 +13,14 @@ let totalTime = timeLeft;
 let timer = null;
 let isRunning = false;
 
+//function to update timer display
 function updateTimer() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
     timerElement.textContent = `${minutes} : ${seconds.toString().padStart(2, "0")}`;
 }   
 
+//function to set timer
 function setTime() {
     const minutes = parseInt(minutesInput.value) || 0;
     const seconds = parseInt(secondsInput.value) || 0;
@@ -28,28 +30,25 @@ function setTime() {
     if (seconds < 0) secondsInput.value = 0;
     if (seconds > 59) secondsInput.value = 59;
     
-    // Check if total time is zero
+    // Check if total time is zero or if the reset button is pressed
     const totalSeconds = (minutes * 60) + seconds;
     if (totalSeconds === 0) {
         alert("Please set a time greater than 0");
         return;
     }
-    
     if (isRunning) {
-        if (!confirm("Timer is running. Do you want to reset the timer?")) {
-            return;
-        }
         pauseTimer();
     }
-    
+    //part to update the timer constantly
     totalTime = totalSeconds;
     timeLeft = totalTime;
     updateTimer();
 }
 
+//function to start timer
 function startTimer() {
     if (isRunning) return;
-
+    //function to remove a number every second. It also tells you when the time is up
     isRunning = true;
     timer = setInterval(() => {
         if (timeLeft > 0) {
@@ -63,6 +62,7 @@ function startTimer() {
     }, 1000);
 }
 
+//funciton to pause the timer when needed
 function pauseTimer() {
     if (!isRunning) return;
 
@@ -70,6 +70,7 @@ function pauseTimer() {
     clearInterval(timer);
 }
 
+//function to reset the timer
 function resetTimer() {
     clearInterval(timer);
     isRunning = false;

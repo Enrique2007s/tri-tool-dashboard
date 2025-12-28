@@ -1,4 +1,4 @@
-:root {
+:root { /* Color variables */
     --primary-color: #ffffff;
     --secondary-color: #817c7c;
     --text-color: #000000;
@@ -34,7 +34,7 @@ h3 {
     color: var(--converter-color);
 }
 
-.page-description-container {
+.page-description-container { /* gray box you see at the top with the page description styling */
     max-width: 800px;
     margin: 0 auto 30px;
     padding: 20px;
@@ -42,13 +42,13 @@ h3 {
     border-radius: 8px;
     text-align: center;
 }
-.page-description {
+.page-description { /* description text styling */
     color: var(--primary-color);
     font-size: 16px;
     line-height: 1.5;
 }
 
-#back-btn {
+#back-btn { /* back to dashboard button styling */
     color: var(--primary-color);
     background-color: var(--converter-color);
     width: 100%;
@@ -57,13 +57,13 @@ h3 {
     font-size: 16px;
 }
 
-#divider {
+#divider { /* container for the three converter boxes */
     grid-template-columns: repeat(3, 1fr);
     justify-items: center; 
     gap: 20px;
 }
 
-.converter-box {
+.converter-box { /* individual converter box styling */
     max-width: 370px;
     width: 90%;
     padding: 20px;
@@ -75,13 +75,14 @@ h3 {
     gap: 15px;
 }
 
-#distanceResult, #volumeResult, #tempResult {
+#distanceResult, #volumeResult, #tempResult { /* result text styling */
     margin-top: 10px;
     font-weight: bold;
     color: var(--converter-color);
     text-align: center;
 }
 
+/* footer styling */
 #footer {
     margin-top: 20px;
     background-color: var(--secondary-color);
@@ -92,7 +93,9 @@ h3 {
     color: var(--footer-text-color);
 }
 
-/* Responsive Design */
+/* Responsive Design. Media queries did not affect final design much,
+but it is always good to practice them
+*/
 @media (max-width: 600px) {
     #divider {
         grid-template-columns: repeat(2, 1fr);

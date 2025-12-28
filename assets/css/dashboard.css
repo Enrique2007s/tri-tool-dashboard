@@ -1,4 +1,4 @@
-:root {
+:root { /* Color variables */
     --primary-color: #ffffff;
     --secondary-color: #817c7c;
     --text-color: #000000;
@@ -26,14 +26,14 @@ body {
     color: var(--title-color);
 }
 
-#subheading {
+#subheading { /* added for subheading styling */
     text-align: center;
     color: white;
     margin-top: -10px;
     margin-bottom: 20px;
 }
 
-.page-description-container {
+.page-description-container { /* gray box you see at the top with the page description styling */
     max-width: 800px;
     margin: 0 auto 30px;
     padding: 20px;
@@ -47,14 +47,14 @@ body {
     line-height: 1.5;
 }
 
-#button-container {
+#button-container { /* container for buttons */
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-bottom: 40px;
 }
 
-#card-container {
+#button-container { /* container for coloured buttons */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
@@ -63,7 +63,7 @@ body {
     padding: 0 20px;
 }
 
-.btn {
+.btn { /* general button styling */
     padding: 15px 25px;
     font-size: 16px;
     border: none;
@@ -76,6 +76,7 @@ body {
     font-weight: bold;
 }
 
+/*Focus and hover effects for buttons*/
 .btn:focus {
     outline: 2px solid var(--title-color);
     outline-offset: 2px;
@@ -107,6 +108,7 @@ body {
     background-color: var(--timer-color);
 }
 
+/* Footer styling */
 #footer {
     margin-top: auto;
     background-color: var(--secondary-color);
@@ -117,9 +119,9 @@ body {
     color: var(--footer-text-color);
 }
 
-/* Responsive Design */
+/* Small Responsive Design */
 @media (max-width: 600px) {
-    #card-container {
+    #button-container {
         grid-template-columns: 1fr;
         align-items: center;
         gap: 15px;

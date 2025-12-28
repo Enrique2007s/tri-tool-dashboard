@@ -1,4 +1,4 @@
-:root {
+:root { /* Color variables */
     --primary-color: #ffffff;
     --secondary-color: #817c7c;
     --text-color: #000000;
@@ -29,7 +29,7 @@ h2 {
     color: var(--timer-color);
 }
 
-.page-description-container {
+.page-description-container { /* gray box you see at the top with the page description styling */
     max-width: 800px;
     margin: 0 auto 30px;
     padding: 20px;
@@ -37,13 +37,13 @@ h2 {
     border-radius: 8px;
     text-align: center;
 }
-.page-description {
+.page-description { /* description text styling */
     color: var(--primary-color);
     font-size: 16px;
     line-height: 1.5;
 }
 
-#back-btn {
+#back-btn { /* back to dashboard button styling */
     color: var(--primary-color);
     background-color: var(--timer-color);
     width: 100%;
@@ -52,7 +52,7 @@ h2 {
     font-size: 16px;
 }
 
-button {
+button { /* timer buttons styling */
     border: none;
     padding: 15px 30px;
     font-size: 18px;
@@ -65,23 +65,23 @@ button {
     margin: 10px;
 }
 
-.timer {
+.timer { /* large timer display styling */
     text-align: center;
     margin-top: 20px;
     font-size: 80px;
 }
 
-.time-inputs {
+.time-inputs { /* input fields for setting timer(minutes and seconds) styling */
     text-align: center;
     margin-bottom: 20px;
 }
 
-.timer-controls {
+.timer-controls { /* start, pause, reset buttons container styling */
     text-align: center;
     margin-top: 20px;
 }
-
-#footer {
+/* footer styling */
+#footer { 
     margin-top: auto;
     background-color: var(--secondary-color);
     width: 100%;

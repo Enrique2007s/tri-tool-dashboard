@@ -18,12 +18,14 @@
     <link rel="stylesheet" href="assets/css/task-manager.css">
 </head>
 <body>
+    <!--back button at the top-->
     <button id="back-btn" class="btn" aria-label="go back to dashboard" onclick="window.location.href='index.html'"> Back to Dashboard</button>
     <h1 id ="main-title">Task Manager</h1>
         <div class="page-description-container">
             <p class="page-description"> The Task Manager tool helps you organize and prioritize your tasks effectively. Once finished, you can remove them to stay on top of your responsibilities and boost your productivity.</p>
         </div>
 
+        <!--area to add new tasks-->
         <h2>Add New Task</h2>
         <div class="task-input-container">
             <div class="task-input-label">
@@ -33,11 +35,13 @@
             </div>
         </div>
 
+        <!--area to view current tasks-->
         <h2>Your Tasks</h2>
             <div class="task-container">
             <ul id="tasklist"></ul>
         </div>
 
+    <!--footer-->
     <footer id="footer">
         <p class="footer-text">Tri-Tool Task Manager &copy; <span id="current-year">2025</span> | A JavaScript Project</p>
     </footer>
