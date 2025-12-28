@@ -24,7 +24,6 @@ body {
 #main-title {
     text-align: center;
     color: var(--title-color);
-    margin-top: 15px 0;
 }
 
 #subheading {

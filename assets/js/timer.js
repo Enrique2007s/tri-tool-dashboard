@@ -1,11 +1,11 @@
 //get elements
-const timerElement = document.getElementById('timer');
-const startBtn = document.getElementById('startBtn');
-const pauseBtn = document.getElementById('pauseBtn');
-const resetBtn = document.getElementById('resetBtn');
-const setTimeBtn = document.getElementById('setTimeBtn');
-const minutesInput = document.getElementById('minutes-input');
-const secondsInput = document.getElementById('seconds-input');
+const timerElement = document.getElementById("timer");
+const startBtn = document.getElementById("startBtn");
+const pauseBtn = document.getElementById("pauseBtn");
+const resetBtn = document.getElementById("resetBtn");
+const setTimeBtn = document.getElementById("setTimeBtn");
+const minutesInput = document.getElementById("minutes-input");
+const secondsInput = document.getElementById("seconds-input");
 
 //timer variables
 let timeLeft = 0 * 60;
@@ -16,7 +16,7 @@ let isRunning = false;
 function updateTimer() {
     const minutes = Math.floor(timeLeft / 60);
     const seconds = timeLeft % 60;
-    timerElement.textContent = `${minutes} : ${seconds.toString().padStart(2, '0')}`;
+    timerElement.textContent = `${minutes} : ${seconds.toString().padStart(2, "0")}`;
 }   
 
 function setTime() {
@@ -78,20 +78,20 @@ function resetTimer() {
 }
 
 //event listeners
-setTimeBtn.addEventListener('click', setTime);
-startBtn.addEventListener('click', startTimer);
-pauseBtn.addEventListener('click', pauseTimer);
-resetBtn.addEventListener('click', resetTimer);
+setTimeBtn.addEventListener("click", setTime);
+startBtn.addEventListener("click", startTimer);
+pauseBtn.addEventListener("click", pauseTimer);
+resetBtn.addEventListener("click", resetTimer);
 
 // code to press enter to set time
-minutesInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
+minutesInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
         setTime();
     }
 });
 
-secondsInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
+secondsInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
         setTime();
     }
 });
