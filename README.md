@@ -46,7 +46,7 @@ Source: https://techsini.com/multi-mockup/index.php
 
 * A bug I found was that whenever the timer would reset, it would go back to its original count. So I made it go back to 0 whenever the reset button was pressed and I kept the number in the input just in case the user wanted to use the same time again.
 
-* An annoying bug I found was in the Task Manager section. If I made the task too big, it would go outside the normal task box and extend beyond the monitor and continue going right.
+* An annoying bug I found was in the Task Manager section. If I made the task too big, it would go outside the normal task box and extend beyond the monitor and continue going right. It was an easy fix. I just edited some CSS code so the content would not overflow and made sure there was a word wrap styling.
 
 ## Testing
 
@@ -118,7 +118,7 @@ https://favicon.io/favicon-generator/
 
 EMMETT: Used for bug fixing and code suggestions throughout the development process. Really useful with repetitive tasks.
 
-DeepSeek: Used for JS help. This AI tool was invaluable with JS. Without it, this project would not have been as good as it is. Furthermore, one part in the JS file for task manager I added the credit to DeepSeek. Truly, this tool became my best friend in two days!
+DeepSeek: Used for JS help. This AI tool was invaluable with JS. Without it, this project would not have been as good as it is. Furthermore, one part in the JS file for task manager I added the credit to DeepSeek because I had no knowledge of creating HTML in JS. Lastly, DeepSeek helped greatly with understanding how JS operates, corrected any mistakes I had made while coding (which were a lot!), and like EMMETT, suggested code of which I took into consideration while writing JS.
 
 Youtube: Youtube helped with a lot of the inspiration to create the three tasks. It was a tough process, trying to understand and trying to replicate in my own way was a hard step in this project.
 
@@ -146,5 +146,6 @@ developer Mozilla: Helped getting the syntax of my code right alongside with Dee
 If you have various functions and they all do similar things, complete one function first, the rest will follow easily. 
 
 If there are various functions and each is doing a different thing, write down all the functions and do it from most to least important. To test, add Event Listeners or a console.log somewhere and test if it works.
+
 
 
