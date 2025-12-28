@@ -91,10 +91,16 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow: hidden;
 }
 
 .text { /* task text styling. Separates the delete button from text */
     padding-right: 20px;
+    flex: 1;
+    min-width: 0;
 }
 
 /*footer styling*/
