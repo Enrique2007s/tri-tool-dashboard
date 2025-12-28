@@ -93,14 +93,16 @@ Timer
 
 Everything related with testing screen sizes is in this document:
 https://docs.google.com/document/d/1dwUF_ai0WJE3m36SNGdY2rDy6Yr7SBkwnClOguKJ4oA/edit?usp=sharing
+<img width="551" height="458" alt="image" src="https://github.com/user-attachments/assets/90a79f65-e4d0-44f8-a1e2-6a1872af2c12" />
 
 ## Deployment
 
 * The following are the steps I took to deploy the site:
-1-) Created a repository and connected the terminal of VS Code to the repository.
-2-) Go to GitHub and enter the repository you wish to deploy(Tri-Tool-Dashboard).
-3-) Go to settings on the top right of the navbar.
-4-) Go to pages on the drop-down on the left side.
+
+1-) Created a repository and connected the terminal of VS Code to the repository.<br>
+2-) Go to GitHub and enter the repository you wish to deploy(Tri-Tool-Dashboard).<br>
+3-) Go to settings on the top right of the navbar.<br>
+4-) Go to pages on the drop-down on the left side.<br>
 5-) Select deploy from a branch, under, select main, root, and finally, the save button.
 
 ## Credits
@@ -138,3 +140,4 @@ developer Mozilla: Helped getting the syntax of my code right alongside with Dee
 If you have various functions and they all do similar things, complete one function first, the rest will follow easily. 
 
 If there are various functions and each is doing a different thing, write down all the functions and do it from most to least important. To test, add Event Listeners or a console.log somewhere and test if it works.
+
